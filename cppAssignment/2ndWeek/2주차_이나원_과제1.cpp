@@ -24,19 +24,35 @@ int main()
 	
 	for (int i = 0; i <= starNumber; i++)				// for문 전체를 입력받은 수만큼 반복
 	{
-
 		for (int j = i; j <= starNumber-1; j++)		// 공백 반복해서 출력
 		{
 			cout << " ";
 		}
 
-		for (int k = 0; k < i; k++)		// '*' 반복해서 출력(두개씩 늘어나야 하는데 하나씩 늘어남)
+		for (int k = 0; k < i*2+1; k++)		// '*' 반복해서 출력(두개씩 늘어나야 하는데 하나씩 늘어남,,)
 		{
 			cout << "*";
 		}
 
 		cout << "\n ";		// 반복 끝나고 줄바꿈
 	}
+
+
+	for (int i = starNumber-1; i >= 0; i--)			
+	{
+		for (int j = i; j < starNumber; j++)	
+		{
+			cout << " ";
+		}
+
+		for (int k = 0; k < i*2+1; k++)		
+		{
+			cout << "*";
+		}
+
+		cout << "\n ";	
+	}
+
 
 	return 0;
 }
