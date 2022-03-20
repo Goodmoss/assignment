@@ -13,45 +13,43 @@ using namespace std;
 
 int main()
 {
+    int starNumber;
 
-	int starNumber;
-	
-	cout << "정수를 입력하시오:";
-	cin >> starNumber;
-	// 정수 입력받아서 starNumber에 저장함
+    cout << "정수를 입력하시오:";
+    cin >> starNumber;
+    // 정수 입력받아서 starNumber에 저장함
 
-	// 별이 점점 늘어나는 부분
-	for (int i = 0; i < starNumber; i++)				
-	{
-		for (int j = i; j < starNumber; j++)	// 공백 출력하는 반복문. 공백 개수가 줄어들면서 출력	
-		{
-			cout << " ";
-		}
+    //별 증가하는 반복문
+    for (int i = 0; i < starNumber; i++)
+    {
+        for (int j = starNumber - 1; j > i; j--)    // 공백이 하나씩 줄어들게 출력
+        {
+            cout << " ";
+        }
 
-		for (int k = 0; k <= i*2; k++)			// * 반복 출력하는 반복문. *이 두개씩 늘어나면서 출력
-		{
-			cout << "*";
-		}
-		cout << "\n ";							// 반복이 끝날 때마다 줄바꿈
-	}
-
-
-	//별이 점점 줄어드는 부분 
-	for (int i = starNumber-1; i > 0; i--)			
-	{
-		for (int j = i; j <= starNumber; j++)	
-		{
-			cout << " ";
-		}
-
-		for (int k = 0; k <= (i-1)*2; k++)
-		{
-			cout << "*";
-		}
-
-		cout << "\n ";	
-	}
+        for (int j = 0; j < 2 * i + 1; j++)         // *이 두 개씩 늘어나게 출력
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
 
 
-	return 0;
+    //별 줄어드는 반복문
+    for (int i = 1; i < starNumber; i++)
+    {
+        for (int j = 0; j < i; j++)                 // 공백이 하나씩 줄어들게 출력
+        {
+            cout << " ";
+        }
+
+        for (int j = 2 * starNumber - 1; j > 2 * i; j--)    // *이 두 개씩 늘어나게 출력
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+
 }
