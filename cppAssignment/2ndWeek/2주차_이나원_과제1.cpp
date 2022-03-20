@@ -19,33 +19,32 @@ int main()
 	
 	cout << "정수를 입력하시오:";
 	cin >> starNumber;
-	//정수 입력받아서 starNumber에 저장함
+	// 정수 입력받아서 starNumber에 저장함
 
-	
-	for (int i = 0; i <= starNumber; i++)				// for문 전체를 입력받은 수만큼 반복
+	// 별이 점점 늘어나는 부분
+	for (int i = 0; i < starNumber; i++)				
 	{
-		for (int j = i; j <= starNumber-1; j++)		// 공백 반복해서 출력
+		for (int j = i; j < starNumber; j++)	// 공백 출력하는 반복문. 공백 개수가 줄어들면서 출력	
 		{
 			cout << " ";
 		}
 
-		for (int k = 0; k < i*2+1; k++)		// '*' 반복해서 출력(두개씩 늘어나야 하는데 하나씩 늘어남,,)
+		for (int k = 0; k <= i*2; k++)			// * 반복 출력하는 반복문. *이 두개씩 늘어나면서 출력
 		{
 			cout << "*";
 		}
-
-		cout << "\n ";		// 반복 끝나고 줄바꿈
+		cout << "\n ";							// 반복이 끝날 때마다 줄바꿈
 	}
 
 
-	for (int i = starNumber-1; i >= 0; i--)			
+	for (int i = starNumber-1; i > 0; i--)			
 	{
-		for (int j = i; j < starNumber; j++)	
+		for (int j = i; j <= starNumber; j++)	
 		{
 			cout << " ";
 		}
 
-		for (int k = 0; k < i*2+1; k++)		
+		for (int k = 0; k <= (i-1)*2; k++)
 		{
 			cout << "*";
 		}
