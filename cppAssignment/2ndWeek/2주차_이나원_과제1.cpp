@@ -15,7 +15,6 @@ int main()
 {
 
 	int starNumber;
-	int s = 0;
 	
 	cout << "정수를 입력하시오:";
 	cin >> starNumber;
@@ -37,6 +36,7 @@ int main()
 	}
 
 
+	//별이 점점 줄어드는 부분 
 	for (int i = starNumber-1; i > 0; i--)			
 	{
 		for (int j = i; j <= starNumber; j++)	
