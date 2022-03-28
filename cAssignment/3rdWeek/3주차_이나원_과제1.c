@@ -49,8 +49,8 @@ int main()
 		scanf_s("%d %d", &x, &y);
 		rewind(stdin);	
 		// 계산할 수를 입력받음
-		// 원래 '연산을 입력하시오'와 '두 수를 공백으로 분리하여 입력하시오' 가 붙어 나오는 버그가 있었음
-		// 표준 입력 버퍼에 Enter키가 남아서 생긴 오류. rewind(stdin)를 통해 초기화해줌
+		// 버퍼와 관련된 오류를 피하기 위해, 
+		// rewind(stdin)를 통해 버퍼를 초기화해줌
 
 		if (alphabet == 'A')
 			printf("%d\n", x + y);
