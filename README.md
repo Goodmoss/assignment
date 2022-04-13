@@ -16,4 +16,5 @@
   + 2주차
     + 정수를 입력받아서 별을 출력하는 프로그램
     + 정수형데이터를 입력받아 이진데이터로 표시하는 프로그램: https://goodmoss.tistory.com/6
-
+  + 4주차
+    + 점수를 배열로 저장하고 결과값을 출력: https://goodmoss.tistory.com/10
